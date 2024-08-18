@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Recipe Search</title>
 </head>
-
 <body>
-    <main>
-        <nav>
-            <div class="image">
-                <img src="logo.jfif" alt="food item">
-            </div>
-            <div class="searchBox">
-                <input type="text" id="input"> <button class="search">Search</button>
-            </div>
-            <div class="saveBox">
-                <button>Add recipe</button>
-                <button>Bookmarks</button>
-            </div>
-        </nav>
     
-        
-    
+    <header>
         <div class="container">
-            <h1>All Recipes</h1>
-            <div id="recipes"></div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="logo">
+                        <img src="logo.jfif" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input">
+                        <input id="input" type="text" placeholder="Search our menu" class="form-control">
+                        <button id="search" class="btn mt-2">Search</button>
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="btn1 mt-4">
+                        <button class="btn">Button1</button>
+                        <button class="btn">Button2</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- <p class="position">&#128578; Start by Searching for a recipe or an ingredient <br>
-        Have fun!</p> -->
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="show">
+                        
+                    <h2 class="text-center">All Recipes</h2>
+                    <div id="recipes"  class="  main"></div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="clickdiv">
+                        <!-- <img src="./4686_MEDIUM0e58.jpg" alt=""> -->
+                      <div class="clickCnetent">
+                        <!-- <h2>Content</h2> -->
+                        <!-- <p> paragraph</p> -->
+                      </div>
+                    </div>
+                    <!-- Additional content can be added here -->
+                </div>
+            </div>
+        </div>
+    </section>
     
-        
-    </main>
-    
-    <aside>
-       <div class="box">
-         <img src="" alt="" id="foodImage" class="hidden">
-       </div>
-        <div class="name hidden"><h3></h3></div>
-    </aside>
-    <section></section>
+    <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
 </html>
