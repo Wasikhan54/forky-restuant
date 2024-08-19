@@ -8,48 +8,72 @@ body {
     font-family: Arial, sans-serif;
     background: #fce5b3; 
 }
-header{
-    /* margin: 15px; */
+header {
     display: flex;
     align-items: center;
     width: 100%;
     height: 12vh;
     background-color: aliceblue;
+    padding: 10px 0;
 }
-.logo  {
+
+.logo {
     width: 50%;
+    display: flex;
+    align-items: center;
 }
+
 .logo img {
     width: 100%;
 }
-.input{
+
+.input {
     display: flex;
-    justify-content: space-around;
-    margin: 12px;
+    justify-content: center;
+    align-items: center;
 }
-#input{
+
+#input {
     width: 70%;
-    height: 8vh;
-    border-radius: 20px;
-    padding: 10px;
-    border: none;
+    height: 7vh;
+    border-radius: 20px 0 0 20px; /* Rounded corners on the left */
+    padding: 4px 20px; /* Add padding for better spacing */
+    border: 2px solid #fce5b3;
     font-size: large;
-    border: 2px solid #fce5b3 ;
+    border-right: none; /* Remove right border */
 }
-.btn{
+
+.btn {
     border: none;
-    width: 80px;
-    height: 40px;
-    background: linear-gradient(45deg,#e5d1a5,rgb(255, 166, 0));
-    border-radius: 25px;
+    width: 120px;
+    height: 7vh;
+    background: linear-gradient(45deg, #e5d1a5, rgb(255, 166, 0));
+    border-radius: 0 20px 20px 0; /* Rounded corners on the right */
     color: white;
     font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.btn1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn1 .btn {
+    margin-left: 10px; /* Space between the buttons */
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+}
+
 .show{
     background-color: #fff;
-    overflow: scroll;
+    /* overflow: scroll; */
     height: 90vh;
-    margin: 12px 0;
+    /* margin: 12px 0; */
 }
 .showData h2{
     margin-top: -85px;
@@ -66,6 +90,8 @@ header{
 }
 #recipes{
     display: flex;
+    flex-direction: column;
+    background-color: white;
 } 
 p{    
 }
@@ -87,16 +113,64 @@ p{
 }
 
 .recipe-item img {
+    /* max-width: 100%; */
     max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
+     border-radius: 50%;
 }
-
+.food-content{
+    padding: 0 12px
+}
 .food-content h5 {
     margin: 10px 0 5px;
 }
-.main{
-    /* display: flex !important; */
+.ele{
+    display: flex !important;
+    flex-direction: row;
 /*  */
+}.clickdiv {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.clickdiv img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.clickContent h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.clickContent p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.clickContent h4 {
+    margin-top: 20px;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: 10px;
+    color: #facf74;
 }
